@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pães e Sabores | Pães, Bolos, Tortas e Panetones</title>
+    <meta
+      name="description"
+      content="Pães e Sabores pães frescos, bolos, tortas e panetones artesanais."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="#top" aria-label="Padaria Delícia home">
+          <img class="brand-mark" src="https://i.postimg.cc/zGFzF3wL/log-padaria.png" alt="Logo Pães e Sabores" />
+          <span>Pães e Sabores</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#produtos">Produtos</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#localizacao">Localização</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#produtos" class="btn btn-primary header-cta">Peça agora</a>
+          <button type="button" class="btn btn-secondary header-cart" id="cartToggle" aria-label="Abrir carrinho">
+            <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M3 4.5h2l2.2 9.4a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 7H7.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="17.5" r="1.5" fill="currentColor"/>
+              <circle cx="17" cy="17.5" r="1.5" fill="currentColor"/>
+            </svg>
+            <span class="cart-count-badge" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <span class="eyebrow">Padaria artesanal</span>
+            <h1>Pães, bolos, tortas e panetones feitos com carinho.</h1>
+            <p>
+              Sabor de casa em cada receita: ingredientes selecionados, massa
+              fresca e atendimento feito para surpreender todos os dias.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#produtos" class="btn btn-primary">Ver cardápio</a>
+              <a href="#localizacao" class="btn btn-secondary">Nossas loja</a>
+              <button type="button" class="btn btn-secondary" id="heroCartBtn" aria-label="Abrir carrinho">
+                <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M3 4.5h2l2.2 9.4a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 7H7.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="10" cy="17.5" r="1.5" fill="currentColor"/>
+                  <circle cx="17" cy="17.5" r="1.5" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+
+            <ul class="hero-stats" aria-label="Estatísticas da padaria">
+         32+     <li>
+                <strong>12k+</strong>
+                <span>clientes felizes</span>
+              </li>
+              <li>
+                <strong>4.9/5</strong>
+                <span>avaliação</span>
+              </li>
+              <li>
+                <strong>01</strong>
+                <span>lojas em Brasilia</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Produtos em destaque da padaria">
+            <div class="showcase-card main-card">
+              <img
+                class="showcase-image"
+                src="https://th.bing.com/th/id/OIP.AcDO3MQ0rJVeD46O_MEQUwHaDx?w=322&h=178&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                alt="Panetone Tradicional"
+              />
+              <div class="badge">Destaque</div>
+
+              <h3>Panetone Tradicional</h3>
+              
+              <div class="price-row">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-panel" id="produtos">
+        <div class="container search-wrap">
+          <div class="input-group">
+            <label for="productSearch">Buscar produto</label>
+            <input
+              id="productSearch"
+              type="search"
+              placeholder="Ex: tortas, bolos, panetone..."
+            />
+          </div>
+
+          <div class="filters" aria-label="Filtros por categoria">
+            <button class="filter-btn active" type="button" data-filter="todos">Todos</button>
+            <button class="filter-btn" type="button" data-filter="pao">Pães</button>
+            <button class="filter-btn" type="button" data-filter="bolo">Bolos</button>
+            <button class="filter-btn" type="button" data-filter="torta">Tortas</button>
+            <button class="filter-btn" type="button" data-filter="panetone">Panetones</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Nossos destaques</span>
+              <h2>Produtos que fazem o seu dia mais saboroso</h2>
+            </div>
+            <a href="#localizacao" class="text-link">Encontrar loja</a>
+          </div>
+
+          <div id="productGrid" class="product-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <aside class="cart-panel" id="cartPanel" aria-live="polite" aria-label="Carrinho de compras">
+        <div class="cart-header">
+          <h3>Seu pedido</h3>
+          <button type="button" class="cart-close" id="cartClose" aria-label="Fechar carrinho">×</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+          <div class="cart-options" aria-label="Opções de pedido">
+            <label class="mode-option">
+              <input type="radio" name="orderMode" value="retirada" checked />
+              <span>Retirada</span>
+            </label>
+
+            <label class="mode-option">
+              <input type="radio" name="orderMode" value="motoboy" />
+              <span>Motoboy</span>
+            </label>
+
+            <label class="mode-option">
+              <input type="radio" name="orderMode" value="app" />
+              <span>App de entrega</span>
+            </label>
+          </div>
+
+          <div class="customer-fields" id="customerFields" hidden>
+            <p class="delivery-note">A taxa de entrega não está incluída no total e será confirmada pela equipe pelo WhatsApp.</p>
+            <label class="field-wrap" for="customerName">
+              <span>Nome</span>
+              <input id="customerName" type="text" placeholder="Seu nome" />
+            </label>
+            <label class="field-wrap" for="customerPhone">
+              <span>Telefone</span>
+              <input id="customerPhone" type="tel" placeholder="(00) 00000-0000" />
+            </label>
+            <label class="field-wrap" for="customerAddress">
+              <span>Endereço</span>
+              <textarea id="customerAddress" rows="3" placeholder="Rua, número, bairro e complemento"></textarea>
+            </label>
+          </div>
+
+          <label class="field-wrap delivery-app-fields" id="deliveryAppFields" for="deliveryAppSelect" hidden>
+            <span>Escolha o app</span>
+            <select id="deliveryAppSelect"></select>
+            <small>O pedido será enviado à padaria pelo WhatsApp para confirmação.</small>
+          </label>
+
+          <label class="store-select-wrap" for="storeSelect">
+            <span id="storeSelectLabel">Escolha a loja para retirada</span>
+            <select id="storeSelect"></select>
+            <small id="storeSelectionHint" aria-live="polite"></small>
+          </label>
+
+          <div class="cart-total-row">
+            <span>Total</span>
+            <strong id="cartTotal">R$ 0,00</strong>
+          </div>
+
+          <div class="cart-actions-row">
+            <button type="button" class="btn btn-secondary cart-clear" id="clearCartBtn">Limpar</button>
+            <button type="button" class="btn btn-primary cart-submit" id="checkoutBtn">Enviar pedido por WhatsApp</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="confirmation-modal" id="confirmationModal" aria-hidden="true">
+        <div class="confirmation-dialog" role="dialog" aria-modal="true" aria-labelledby="confirmationTitle">
+          <h3 id="confirmationTitle">Confirmar pedido</h3>
+          <p id="confirmationText">Seu pedido será enviado por WhatsApp.</p>
+          <div class="confirmation-actions">
+            <button type="button" class="btn btn-secondary" id="cancelCheckoutBtn">Cancelar</button>
+            <button type="button" class="btn btn-secondary" id="printReceiptBtn">Imprimir comprovante</button>
+            <button type="button" class="btn btn-primary" id="confirmCheckoutBtn">Confirmar</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="print-receipt" id="printReceipt" aria-label="Comprovante do pedido">
+        <header class="receipt-header">
+          <h1>Pães e Sabores</h1>
+          <p>COMPROVANTE DO PEDIDO — NÃO É NOTA FISCAL</p>
+        </header>
+        <div class="receipt-details">
+          <p>Número do pedido: <strong id="receiptOrderNumber"></strong></p>
+          <p>Data: <span id="receiptDate"></span></p>
+          <p>Unidade: <span id="receiptStore"></span></p>
+          <p>Modalidade: <span id="receiptMode"></span></p>
+          <div id="receiptCustomerDetails" hidden>
+            <p>Cliente: <span id="receiptCustomerName"></span></p>
+            <p>Telefone: <span id="receiptCustomerPhone"></span></p>
+            <p>Endereço: <span id="receiptCustomerAddress"></span></p>
+          </div>
+        </div>
+        <table class="receipt-items">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Qtd.</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody id="receiptItems"></tbody>
+        </table>
+        <p class="receipt-total">Total: <strong id="receiptTotal"></strong></p>
+        <p class="receipt-footer">Obrigado pela preferência!</p>
+      </section>
+
+      <secti
+      ´-Çon class="about" id="sobre">
+        <div class="container about-grid">
+          <div class="about-image">
+            <div class="image-card image-one"></div>
+            <div class="image-card image-two"></div>
+          </div>
+
+          <div class="about-copy">
+            <span class="eyebrow">Nossa história</span>
+            <h2>Receitas tradicionais com a qualidade que você merece.</h2>
+            <p>
+              Na Pães e Sabores, cada produto é produzido com fermentação natural,
+              cada torta é montada no mesmo dia e cada encomenda recebe atenção
+              especial para chegar até sua mesa com sabor incrível.
+            </p>
+
+            <div class="about-points">
+              <div>
+                <strong>100%</strong>
+                <span>ingredientes selecionados</span>
+              </div>
+              <div>
+                <strong>Frescor</strong>
+                <span>todos os dias</span>
+              </div>
+              <div>
+                <strong>Atendimento</strong>
+                <span>amigável e rápido</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="location" id="localizacao">
+        <div class="container location-grid">
+          <div class="location-panel">
+            <span class="eyebrow">Localização</span>
+            <h2>Venha conhecer nossa loja</h2>
+
+            <div class="input-group">
+              <label for="storeSearch">Buscar nossa loja</label>
+              <input
+                id="storeSearch"
+                type="search"
+                placeholder="Ex: Brasilia-DF..."
+              />
+            </div>
+
+            <div id="storeList" class="store-list" aria-live="polite"></div>
+          </div>
+
+          <div class="map-card" aria-label="Mapa ilustrado de localização">
+            <div class="map-core">
+              <span class="map-dot dot-a">A</span>
+              <span class="map-dot dot-b">B</span>
+              <span class="map-dot dot-c">C</span>
+              <span class="map-dot dot-d">D</span>
+              <div class="map-route"></div>
+            </div>
+            <div class="map-legend">
+              <div>
+                <span class="legend-color blue"></span>
+                <span>Nossa loja</span>
+              </div>
+              <div>
+                <span class="legend-color amber"></span>
+                <span>Unidades próximas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+      <div class="container footer-content">
+        <div>
+          <a class="brand footer-brand" href="#top">
+            <img class="brand-mark-footer" src="https://i.postimg.cc/zGFzF3wL/log-padaria.png" alt="" />
+            <span>Pães e Sabores</span>
+          </a>
+          <p>Frescor e sabor em cada detalhe.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#produtos">Produtos</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#localizacao">Localização</a>
+        </div
+        
+        >
+
+        <div class="footer-contact">
+          <p>contato@paesesaboresdoirmaoantonio.com.br</p>
+          <div class="footer-wats">
+           
+          <a href="https://wa.me/5561994284704?text=Ola%20P%C3%A3es%20e%20Sabores%20no%20que%20%20podemos%20ajudar%20%3F" target="_blank" rel="noopener noreferrer">
+            <img class="wats" src="https://images.template.net/400234/Whatsapp-Gradient-edit-online.png" alt="WhatsApp">
+            <p>(61)994284704 </p>
+          </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
